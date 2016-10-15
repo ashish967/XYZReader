@@ -90,6 +90,7 @@ public class ArticleListFragment extends Fragment implements LoaderManager.Loade
                 float heightScaleFactor = (float)  mImageView.getHeight() / (float) mImageView.getDrawable().getIntrinsicHeight();
                 float widthScaleFactor=  (float)  mImageView.getWidth() / (float) mImageView.getDrawable().getIntrinsicWidth();
                 float maxScale=heightScaleFactor>widthScaleFactor?heightScaleFactor:widthScaleFactor;
+                maxScale*=2;
                 mMatrix.postScale(maxScale,maxScale);
                 mScaleFactor= maxScale;
                 mImageView.setImageMatrix(mMatrix);
